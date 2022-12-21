@@ -4,7 +4,7 @@ This is a simple web app (proof of concept) version of Patreon for web3. Creator
 
 #### How Auth Works?
 
-Creators decide what criteria to use, such as which type of authentication they want for their users. Authentication is carried out by leveraging on-chain data. Alchemy APIs are used to connect to the individual chains in the backend of the app. For the EVM ecosystem, ethers js is used, while for the Solana ecosystem, Solana web3 js and metaplex js are used for FTs and NFTs, respectively. With on-chain data authentication, the app is fairly robust and reliable.
+Creators decide what criteria to use, such as which type of authentication they want for their users. Authentication is carried out by leveraging on-chain data. Alchemy APIs are used to connect to the individual chains in the backend of the app. For the EVM ecosystem, ethers js is used, while for the Solana ecosystem, Solana web3 js and metaplex js are used for FTs and NFTs, respectively. With on-chain data authentication, the app is fairly robust and reliable. Only User(member) public address and Author(community creator) public address is required to verify if a User holds the FT/NFT specified by Author.
 
 #### Can creators upload any content?
 
@@ -19,5 +19,22 @@ I myself bought an NFT on Polygon mainnet for testing purposes. The app is teste
     - Ethers Js
     - @metaplex-foundation/js
     - @solana/web3.js
-    - CRA template
+    - CRA template for FE.
     - Express
+
+#### Local Setup
+
+```
+Requirements:
+Node(Version): 18(LTS)
+Yarn(latest)
+
+clone the repo
+cd
+cd server && yarn install
+cd
+cd client && yarn install
+cd
+yarn start
+
+```
