@@ -35,6 +35,8 @@ cd server && yarn install
 cd
 cd client && yarn install
 cd
+
+First remove .example from .env.example and fill the KEY with value
 yarn start
 
 ```
