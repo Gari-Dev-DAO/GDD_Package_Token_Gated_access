@@ -40,3 +40,61 @@ First remove .example from .env.example and fill the KEY with value
 yarn start
 
 ```
+
+### Endpoints
+
+The endpoints only states the two endpoints which specifically used mainly for Authentication.
+
+POST|`http://localhost:4000/api/pub/add`| To register a new Author
+
+```
+{
+  "data": {
+    "authorName": <string>,
+    "ftAddrs": <string>,
+    "nftAddrs": <string>,
+    "authorAddrs": <string>,
+    "nftToken": <string>,
+    "chainId": <string>,
+    "chainName": <string>,
+    "tag": <string>
+  }
+}
+```
+
+Response
+
+```
+{ msg: 'Registered as Author' }
+
+```
+
+Now to Join the already registered Author just provide the author address and member address
+
+POST|`http://localhost:4000/api/sub/add`| To register a new Author
+
+```
+{
+  "data":{
+  "userAddrs": <member address string>,
+  "pubAddr": <already registered author address string>
+  }
+}
+```
+
+Response
+
+```
+{ response: { msg: 'You just subscribed', data: Creator Data like(Blogs, Pics), status: 200 } }
+
+```
+
+A author registration is conventional, to authenticate the user,
+
+1. First creator/author data is retrieved from the DB with `pubAddr`
+2. Check for the chainName either SOL or ETH, then chain Id mainnet, devnnet etc.
+3. Check for type of auth like with NFT or FT
+4. Init the class SolApi or EvmApi ref(`server/src/utils/web3.ts`) as per above data
+5. Call the required auth public method like `checkNfts, checkBalance` ref(`server/src/services/subAuthentication.ts`)
+6. Which returns boolean.  
+   In the ref(`server/src/utils/web3.ts`) ethersjs and solana web3js connect to the Alchemy endpoint to query onchain data. For EVM ethers js connects to contract and calls the ABI, for Solana getBalance() and for NFT metaplex getAllByOwners and findByMint data intersection is used.

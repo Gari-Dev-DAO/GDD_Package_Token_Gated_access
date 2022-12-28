@@ -15,7 +15,7 @@ app.use(helmet());
 app.use(morgan('tiny'));
 const connection = initConnection();
 connection.once('open', () => {
-  console.log(`DB loaded Sucessfully`);
+  console.log(`Yes the DB loaded sucessfully`);
 });
 /**
  * Routes

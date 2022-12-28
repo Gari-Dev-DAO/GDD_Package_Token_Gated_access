@@ -7,7 +7,7 @@ import { EvmApi, SolApi } from 'src/utils/web3';
 import { subscriberSchema } from 'src/utils/zodSchema';
 const URI_MAIN_NET = process.env.SOL_URI_DEV_NET as string;
 const POL = process.env.POL_URI_MAIN_NET as string;
-const eth = process.env.EVM_URI_MAIN_NET as string;
+// const eth = process.env.EVM_URI_MAIN_NET as string;
 export const addNewUser = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const { success } = await subscriberSchema.safeParseAsync(req.body.data);
