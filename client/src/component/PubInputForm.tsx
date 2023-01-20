@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Gateway from '../integrations/Gatway';
 import { saveTheNewPub } from '../utils/fetchAPIData';
 import { PublisherResponse } from '../utils/interfaces';
 import { checkForImmediateWallet, checkForWallet, connectToWallet } from '../utils/walletProvider';
@@ -206,6 +207,11 @@ const PubInputForm = () => {
                       Brief description for your profile. URLs are hyperlinked.
                     </p> */}
             </div>
+              
+            <div>
+            <Gateway /> 
+            </div>  
+
             <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
               <button
                 onClick={handleHomeClick}
