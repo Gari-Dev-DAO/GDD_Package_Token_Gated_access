@@ -29,11 +29,11 @@ function ConnectToWallet() {
   return (
     <div>
       <ConnectBtn />
-      <button className="border-2 border-slate-300 ml-16 p-1">Home</button>
-      <button className="border-2 border-slate-300 ml-16 p-1" onClick={handleLoginClick}>
+      <button >Home</button>
+      <button  onClick={handleLoginClick}>
         Login
       </button>
-      <button className="border-2 border-slate-300 ml-16 p-1" onClick={handleToBPub}>
+      <button onClick={handleToBPub}>
         Become a Creator
       </button>
     </div>

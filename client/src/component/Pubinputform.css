@@ -1,0 +1,62 @@
+.inputPage{
+    background: url(http://www.wallpapers4u.org/wp-content/uploads/forms_shapes_light_color_35091_1920x1080.jpg);
+    color: white;
+    background-size: cover;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+}
+
+.inputPage label {  
+    text-align: center;
+    font-size: 2rem;
+    height: 100%;
+    align-items: center;
+    margin: auto;
+    margin-right: 20px;
+    align-items: center;
+}
+
+.inputPage input {
+    padding: 20px;
+    height: 100%;
+    width: 60%;
+    background: transparent;
+    border-radius: 10px;
+    border: 1px solid rgb(203, 203, 203);
+    margin-top:20px; 
+}
+
+.inputPage textarea{
+    padding: 20px;
+    height: 100%;
+    width: 60%;
+    
+    background: transparent;
+    border-radius: 10px;
+
+    font-size: 1.2rem;
+     border: 1px solid rgb(203, 203, 203);
+}
+.inputPage select {
+    padding: 20px;
+    height: 100%;
+    width: 60%;
+    color: wheat;
+    background: transparent;
+    border-radius: 10px;
+    border: 10px;
+   font-size: 1.2rem;
+    border: 1px solid white;
+}
+
+.btn {
+    padding: 10px;
+    margin: 20px;
+    background: transparent;
+    border-radius: 10px;
+    border:1px solid rgb(231, 231, 231);
+    width: 10%;
+}
+
