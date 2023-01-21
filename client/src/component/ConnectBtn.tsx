@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import UDomain from '../integrations/Udomain';
 import { connectToPhantom, connectToWallet } from '../utils/walletProvider';
 
 function ConnectBtn() {
@@ -50,15 +51,19 @@ function ConnectBtn() {
     <>
       <button
         onClick={handleClickForMM}
-        className="inline-flex justify-center rounded-full border-2 border-slate-400 m-2 p-1"
+       
       >
         {mmAddress ? usrAddr.slice(0, 12) : <p>Connect To MetaMask</p>}
       </button>
       <button
         onClick={handleClickForPHM}
-        className="inline-flex justify-center rounded-full border-2 border-slate-400 m-2 p-1"
+       
       >
         {phmAddress ? usrAddr.slice(0, 12) : <p>Connect To Phantom</p>}
+      </button>
+
+      <button>
+        <UDomain />
       </button>
     </>
   );

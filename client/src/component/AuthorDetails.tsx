@@ -31,49 +31,49 @@ const AuthorDetails = (props: PublisherResponse) => {
     }
   }
   return (
-    <div className="border border-slate-300 m-4 p-4 font-mono flex">
-      <div className="">
-        <div className="flex mx-1 px-1 my-1">
+    <div>
+      <div >
+        <div >
           <p>Author Name:</p>
-          <p className="mx-2">{props.authorName}</p>
+          <p>{props.authorName}</p>
         </div>
 
-        <div className="flex mx-1 px-1 my-1">
+        <div >
           <p>Author Address :</p>
-          <p className="mx-2">{props.authorAddrs}</p>
+          <p >{props.authorAddrs}</p>
         </div>
-        <div className=" flex mx-1 px-1 my-1">
+        <div >
           <p>Chain ID: </p>
-          <p className="mx-2">{props.chainId}</p>
+          <p >{props.chainId}</p>
         </div>
-        <div className=" flex mx-1 px-1 my-1">
+        <div >
           <p>Chain Name: </p>
-          <p className="mx-2">{props.chainName}</p>
+          <p>{props.chainName}</p>
         </div>
-        <div className="flex mx-1 px-1 my-1">
+        <div>
           <p>Token Type: </p>
-          <p className="mx-2">{props.tag}</p>
+          <p >{props.tag}</p>
         </div>
-        <div className="flex mx-1 px-1 my-1">
+        <div>
           <p>NFT Token ID or FT Balance: </p>
-          <p className="mx-2">{props.nftToken}</p>
+          <p >{props.nftToken}</p>
         </div>
-        <div className="flex mx-1 px-1 my-1">
+        <div >
           <p>NFT Address: </p>
-          <p className="mx-2">{props.nftAddrs}</p>
+          <p >{props.nftAddrs}</p>
         </div>
-        <div className="flex mx-1 px-1 my-1">
+        <div>
           <p>FT Address: </p>
-          <p className="mx-2">{props.ftAddrs}</p>
+          <p >{props.ftAddrs}</p>
         </div>
       </div>
-      <div className="ml-60">
+      <div >
         <div>
-          <p className="text-lg">About Me</p>
-          <p className="my-8">{props.about}</p>
+          <p>About Me</p>
+          <p>{props.about}</p>
         </div>
         <div>
-          <button onClick={handleJoin} className="my-8 rounded-full border border-slate-300 p-2 text-lg">
+          <button onClick={handleJoin} >
             {isJoined ? 'Joined' : 'Join Me'}
           </button>
         </div>

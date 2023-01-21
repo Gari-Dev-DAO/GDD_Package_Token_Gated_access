@@ -18,12 +18,12 @@ function Hero() {
 
   return (
     <div>
-      <div className="m-2 p-2 text-center font-mono font-thin border">
+      <div >
         List of Creators and Their Criteria To Join Their Community
       </div>
       {pubsArr.length>0 ?pubsArr.map((singlePubData) => {
         return <AuthorDetails {...singlePubData}/>;
-      }): <Link to={'/pub/form'}><p className='my-8 p-2 text-center font-mono text-xl underline'>Be the first creator.</p></Link>}
+      }): <Link to={'/pub/form'}><p >Be the first creator.</p></Link>}
     </div>
   );
 }

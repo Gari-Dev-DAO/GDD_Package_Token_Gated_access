@@ -22,20 +22,20 @@ function PubContentInput() {
   return (
     <>
       <div>
-        <div className="md:grid md:grid-cols-3 md:gap-6">
-          <div className="md:col-span-1">
-            <div className="px-4 sm:px-0 mx-4 my-8">
-              {/* <h3 className="text-lg font-medium leading-6 text-gray-900">Your Public Address</h3> */}
-              <p className="mt-1 text-sm text-gray-600">First slect from dropdown menu what you want to upload.</p>
+        <div>
+          <div>
+            <div>
+              {/* <h3 ="text-lg font-medium leading-6 text-gray-900">Your Public Address</h3> */}
+              <p>First slect from dropdown menu what you want to upload.</p>
             </div>
           </div>
-          <div className="mt-5 md:col-span-2 md:mt-0">
+          <div>
             <form action="#" method="POST">
-              <div className="shadow sm:overflow-hidden sm:rounded-md">
-                <div className="space-y-6 bg-white px-4 py-5 sm:p-6">
-                  <div className="grid grid-cols-3 gap-6">
-                    <div className="col-span-3 sm:col-span-2">
-                      <label htmlFor="content-type" className="block text-sm font-medium text-gray-700">
+              <div >
+                <div>
+                  <div >
+                    <div>
+                      <label htmlFor="content-type" >
                         Content Type
                       </label>
                       <select
@@ -44,7 +44,6 @@ function PubContentInput() {
                         // autoComplete="country-name"
                         value={textArea.uploadType}
                         onChange={(e) => setTextArea({ ...textArea, uploadType: e.target.value })}
-                        className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                       >
                         <option>Text</option>
                         <option>Picture</option>
@@ -54,47 +53,30 @@ function PubContentInput() {
                   </div>
 
                   <div>
-                    <label htmlFor="about" className="block text-sm font-medium text-gray-700">
+                    <label htmlFor="about" >
                       Text
                     </label>
-                    <div className="mt-1">
+                    <div >
                       <textarea
                         id="about"
                         name="about"
                         rows={3}
                         value={textArea.textData}
                         onChange={(e) => setTextArea({ ...textArea, textData: e.target.value })}
-                        className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                         placeholder="you@example.com"
                         defaultValue={''}
                       />
                     </div>
-                    <p className="mt-2 text-sm text-gray-500">Write a short paragraph.</p>
+                    <p>Write a short paragraph.</p>
                   </div>
-                  {/* 
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700">Photo</label>
-                    <div className="mt-1 flex items-center">
-                      <span className="inline-block h-12 w-12 overflow-hidden rounded-full bg-gray-100">
-                        <svg className="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
-                        </svg>
-                      </span>
-                      <button
-                        type="button"
-                        className="ml-5 rounded-md border border-gray-300 bg-white py-2 px-3 text-sm font-medium leading-4 text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                      >
-                        Change
-                      </button>
-                    </div>
-                  </div> */}
+               
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700">Upload Picture</label>
-                    <div className="mt-1 flex justify-center rounded-md border-2 border-dashed border-gray-300 px-6 pt-5 pb-6">
-                      <div className="space-y-1 text-center">
+                    <label >Upload Picture</label>
+                    <div >
+                      <div >
                         <svg
-                          className="mx-auto h-12 w-12 text-gray-400"
+                         
                           stroke="currentColor"
                           fill="none"
                           viewBox="0 0 48 48"
@@ -107,26 +89,25 @@ function PubContentInput() {
                             strokeLinejoin="round"
                           />
                         </svg>
-                        <div className="flex text-sm text-gray-600">
+                        <div >
                           <label
                             htmlFor="file-upload"
-                            className="relative cursor-pointer rounded-md bg-white font-medium text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:text-indigo-500"
+                            
                           >
                             <span>Upload a file</span>
-                            <input id="file-upload" name="file-upload" type="file" className="sr-only" />
+                            <input id="file-upload" name="file-upload" type="file"  />
                           </label>
-                          <p className="pl-1">or drag and drop</p>
+                          <p >or drag and drop</p>
                         </div>
-                        <p className="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
+                        <p >PNG, JPG, GIF up to 10MB</p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
+                <div >
                   <button
                     type="submit"
                     onClick={handleBtnClick}
-                    className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                   >
                     Save
                   </button>
