@@ -8,9 +8,8 @@ function App() {
     console.log((window as any).phantom?.solana?.isPhantom);
   });
   return (
-    <div>
+    <div className='page'>
       <ConnectToWallet />
-      <Hero />
       <Dilect/>
     </div>
   );

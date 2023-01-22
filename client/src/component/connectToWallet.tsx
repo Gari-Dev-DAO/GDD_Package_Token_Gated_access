@@ -4,6 +4,7 @@ import ConnectBtn from './ConnectBtn';
 import { checkForPublisher } from '../utils/external';
 import { useNavigate } from 'react-router-dom';
 import { checkForAuthorExist } from '../utils/fetchAPIData';
+import './app.css'
 
 function ConnectToWallet() {
   // const [walletStatus, setWalletStatus] = useState(false);
@@ -27,7 +28,7 @@ function ConnectToWallet() {
   }
 
   return (
-    <div>
+    <div style={{display:'flex',justifyContent:'space-around'}} className='connect-wallet'>
       <ConnectBtn />
       <button >Home</button>
       <button  onClick={handleLoginClick}>

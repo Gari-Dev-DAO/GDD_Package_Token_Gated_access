@@ -5,6 +5,7 @@ import { saveTheNewPub } from '../utils/fetchAPIData';
 import { PublisherResponse } from '../utils/interfaces';
 import { checkForImmediateWallet, checkForWallet, connectToWallet } from '../utils/walletProvider';
 import "./Pubinputform.css"
+import './app.css'
 
 const PubInputForm = () => {
   const [authorAddrs, setAuthorAddrs] = useState('');
@@ -55,7 +56,7 @@ const PubInputForm = () => {
           <div>
             <div>
               <div>
-                <div>
+                <div className='inputField'>
                   <label htmlFor="full-name" >
                     Full Name
                   </label>
@@ -70,7 +71,7 @@ const PubInputForm = () => {
                   />
                 </div>
 
-                <div>
+                <div className='inputField'>
                   <label htmlFor="public-address" >
                     Your Public Address
                   </label>
@@ -85,7 +86,7 @@ const PubInputForm = () => {
                   />
                 </div>
 
-                <div>
+                <div className='inputField'>
                   <label htmlFor="nft-address" >
                     NFT Address
                   </label>
@@ -100,7 +101,7 @@ const PubInputForm = () => {
                   />
                 </div>
 
-                <div>
+                <div className='inputField'>
                   <label htmlFor="chain-name" >
                     Chain Name
                   </label>
@@ -117,7 +118,7 @@ const PubInputForm = () => {
                   </select>
                 </div>
 
-                <div >
+                <div className='inputField' >
                   <label htmlFor="token-address" >
                     Fungible Token Address(FT)
                   </label>
@@ -132,7 +133,7 @@ const PubInputForm = () => {
                   />
                 </div>
 
-                <div>
+                <div className='inputField'>
                   <label htmlFor="chain-id" >
                     chain ID 
                   </label>
@@ -149,7 +150,7 @@ const PubInputForm = () => {
                   </select>
                 </div>
 
-                <div >
+                <div className='inputField' >
                   <label htmlFor="auth-type">
                     Auth Type
                   </label>
@@ -164,7 +165,7 @@ const PubInputForm = () => {
                     <option>NFT</option>
                   </select>
                 </div>
-                <div>
+                <div className='inputField'>
                   <label htmlFor="nft-id" >
                     Token ID or Token Balance
                   </label>
@@ -180,7 +181,7 @@ const PubInputForm = () => {
                 </div>
               </div>
             </div>
-            <div >
+            <div className='about'>
               <label htmlFor="about" >
                 About
               </label>
