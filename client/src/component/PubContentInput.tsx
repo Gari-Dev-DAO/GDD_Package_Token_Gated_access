@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { uploadData } from '../utils/fetchAPIData';
 import { useNavigate } from 'react-router-dom';
+import './app.css'
 function PubContentInput() {
   const [textArea, setTextArea] = useState({
     uploadType: '',
@@ -21,12 +22,12 @@ function PubContentInput() {
   }
   return (
     <>
-      <div>
-        <div>
+      <div className='page'>
+        <div className='pub-input'>
           <div>
             <div>
               {/* <h3 ="text-lg font-medium leading-6 text-gray-900">Your Public Address</h3> */}
-              <p>First slect from dropdown menu what you want to upload.</p>
+              <p style={{margin:'auto'}}>First slect from dropdown menu what you want to upload.</p>
             </div>
           </div>
           <div>
@@ -38,6 +39,7 @@ function PubContentInput() {
                       <label htmlFor="content-type" >
                         Content Type
                       </label>
+                      <br></br>
                       <select
                         id="content-type"
                         name="content-type"
@@ -81,6 +83,7 @@ function PubContentInput() {
                           fill="none"
                           viewBox="0 0 48 48"
                           aria-hidden="true"
+                          className='img'
                         >
                           <path
                             d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
@@ -95,6 +98,7 @@ function PubContentInput() {
                             
                           >
                             <span>Upload a file</span>
+                            <br></br>
                             <input id="file-upload" name="file-upload" type="file"  />
                           </label>
                           <p >or drag and drop</p>
