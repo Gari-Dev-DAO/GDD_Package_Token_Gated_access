@@ -7,7 +7,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import PubForm from './component/PubForm';
 import PubContentInput from './component/PubContentInput';
 import SubContent from './component/SubContent';
-
+import { WalletConnectProvider } from './component/WalletContext';
+import '@solana/wallet-adapter-react-ui/styles.css'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -29,7 +30,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
+    <WalletConnectProvider>
     <RouterProvider router={router} />
+    </WalletConnectProvider>
   </React.StrictMode>
 );
 

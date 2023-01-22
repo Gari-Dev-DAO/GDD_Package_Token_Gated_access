@@ -16,14 +16,14 @@ function RequestGatewayToken() {
     const { gatewayStatus, requestGatewayToken, gatewayToken } = useGateway();
     return (
         <>
-            <div>Wallet adapter connected</div>
-            {
+            {/* <div>Wallet adapter connected</div> */}
+            {/* {
                 GatewayStatus[gatewayStatus] == 'ACTIVE' ? <p>TMNE INSAAN APNE KO PROOVE KIA</p> : <p>TM INSAAN HO KYA?</p>
             }
             <br />
             <button type='submit' onClick={requestGatewayToken}>Request Pass</button>
             <br />
-            <div>Pass: {gatewayToken?.publicKey.toBase58()}</div>
+            <div>Pass: {gatewayToken?.publicKey.toBase58()}</div> */}
         </>
     )
 }
