@@ -1,15 +1,21 @@
-.inputPage{
+
+.connect-wallet button{
+   display: block;
+   background-color: greenyellow;
+   padding: 5px 10px;
+   border-radius: 10px;
+}
+.connect-wallet{
+    background-color: rgba(8, 8, 8, 0.9);
+    min-height: 4rem;
+    padding: 10px 5px;
+}
+.page{
     background-color: rgb(0, 0, 0,0.8);
-    color: white;
-    background-size: cover;
-    width: 100%;
-    margin: auto;
-    text-align: center;
-    align-items: center;
-    padding: 10px 5%;
+    min-height: 100vh;
 }
 
-.inputPage label {  
+.page label {  
     text-align: center;
     font-size: 2rem;
     height: 100%;
@@ -19,7 +25,7 @@
     align-items: center;
 }
 
-.inputPage input {
+.page input {
     padding: 20px;
     height: 100%;
     width: 60%;
@@ -28,12 +34,8 @@
     border: 1px solid rgb(203, 203, 203);
     margin-top:20px; 
 }
-.inputPage .inputField{
-    display: flex;
-    margin: 10px 0px;
-}
 
-.inputPage textarea{
+.page textarea{
     padding: 20px;
     height: 100%;
     width: 60%;
@@ -44,7 +46,7 @@
     font-size: 1.2rem;
      border: 1px solid rgb(203, 203, 203);
 }
-.inputPage select {
+.page select {
     padding: 20px;
     height: 100%;
     width: 60%;
@@ -64,4 +66,3 @@
     border:1px solid rgb(231, 231, 231);
     width: 10%;
 }
-
